@@ -17,5 +17,5 @@ jobs:
         username: "${{ secrets.DOCKER_USERNAME }}"
         password: "${{ secrets.DOCKER_PASSWORD }}"
         registry: registry.cn-beijing.aliyuncs.com
-        repository: mengli/obs-headless-node
+        repository: mengli/cloudswitcher-server
         tags: latest

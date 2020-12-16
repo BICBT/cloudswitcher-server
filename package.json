@@ -1,20 +1,19 @@
 {
-  "name": "obs-headlees-node",
+  "name": "cloudswitcher-server",
   "version": "1.0.0",
-  "license": "ISC",
   "private": true,
-  "homepage": "https://github.com/MengLi619/node-service-template#readme",
-  "repository": "https://github.com/MengLi619/node-service-template",
+  "repository": "https://github.com/BICBT/cloudswitcher-server.git",
   "scripts": {
     "build": "rm -rf dist/ && tsc",
-    "start": "NODE_ENV=production node dist/index.js"
+    "start": "NODE_ENV=production node dist/index.js",
+    "dev": "NODE_ENV=dev node dist/index.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-validator": "^5.3.1",
     "http-status-codes": "^2.1.4",
-    "obs-node": "git+https://github.com/MengLi619/obs-node.git#v1.0.24"
+    "obs-node": "git+https://github.com/BICBT/obs-node.git#v1.0.26"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
