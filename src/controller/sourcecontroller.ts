@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import * as obs from 'obs-node';
 import { StatusCodes } from 'http-status-codes';
-import { UpdateSourceRequest } from 'obs-node';
+import { UpdateSourceSettings } from 'obs-node';
 
 export const sourceController = new class SourceController {
 
@@ -37,7 +37,7 @@ export const sourceController = new class SourceController {
     try {
       const sceneId: string = req.params.sceneId;
       const sourceId: string = req.params.sourceId;
-      const request: UpdateSourceRequest = req.body;
+      const request: UpdateSourceSettings = req.body;
       obs.updateSource(sceneId, sourceId, request);
       res.status(StatusCodes.OK).json(obs.getSource(sceneId, sourceId));
     } catch (e) {
