@@ -1,0 +1,118 @@
+{
+  "cacheFolder": "/tmp/cache",
+  "scenes": [
+    {
+      "id": "scene1",
+      "name": "scene1",
+      "sources": [
+        {
+          "id": "source1",
+          "name": "source1",
+          "type": "Live",
+          "url": "rtmp://host.docker.internal/live/source1",
+          "previewUrl": "rtmp://host.docker.internal/live/source1"
+        }
+      ]
+    },
+    {
+      "id": "scene2",
+      "name": "scene2",
+      "sources": [
+        {
+          "id": "source2",
+          "name": "source2",
+          "type": "Media",
+          "url": "https://cbt-development.oss-cn-beijing.aliyuncs.com/test-clips/BigBuckBunny_320x180.mp4",
+          "previewUrl": "rtmp://host.docker.internal/preview/source2",
+          "md5": "23ac5a7c88378522f95483e5e9ac44b1",
+          "startOnActive": false,
+          "output": {
+            "server": "rtmp://host.docker.internal/preview",
+            "key": "source2",
+            "hardwareEnable": false,
+            "width": 640,
+            "height": 360,
+            "videoBitrateKbps": 1000,
+            "keyintSec": 1,
+            "rateControl": "CBR",
+            "preset": "ultrafast",
+            "profile": "main",
+            "tune": "zerolatency",
+            "audioBitrateKbps": 64
+          }
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "name": "scene3",
+      "sources": [
+        {
+          "id": "source3",
+          "name": "source3",
+          "type": "Media",
+          "url": "https://cbt-development.oss-cn-beijing.aliyuncs.com/test-clips/BigBuckBunny_320x180.mp4",
+          "previewUrl": "rtmp://host.docker.internal/preview/source3",
+          "md5": "23ac5a7c88378522f95483e5e9ac44b1",
+          "startOnActive": true,
+          "output": {
+            "server": "rtmp://host.docker.internal/preview",
+            "key": "source3",
+            "hardwareEnable": false,
+            "width": 640,
+            "height": 360,
+            "videoBitrateKbps": 1000,
+            "keyintSec": 1,
+            "rateControl": "CBR",
+            "preset": "ultrafast",
+            "profile": "main",
+            "tune": "zerolatency",
+            "audioBitrateKbps": 64
+          }
+        }
+      ]
+    }
+  ],
+  "dsk": [
+    {
+      "id": "logo",
+      "url": "https://httpbin.org/image/png",
+      "position": "top-left",
+      "top": 100,
+      "left": 100,
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "output": {
+    "url": "rtmp://host.docker.internal/live/output",
+    "previewUrl": "rtmp://host.docker.internal/live/output"
+  },
+  "settings": {
+    "video": {
+      "baseWidth": 1280,
+      "baseHeight": 720,
+      "outputWidth": 1280,
+      "outputHeight": 720,
+      "fpsNum": 25,
+      "fpsDen": 1
+    },
+    "audio": {
+      "sampleRate": 44100
+    },
+    "output": {
+      "server": "rtmp://host.docker.internal/live",
+      "key": "output",
+      "hardwareEnable": false,
+      "width": 1280,
+      "height": 720,
+      "videoBitrateKbps": 2000,
+      "keyintSec": 1,
+      "rateControl": "CBR",
+      "preset": "medium",
+      "profile": "main",
+      "tune": "zerolatency",
+      "audioBitrateKbps": 64
+    }
+  }
+}

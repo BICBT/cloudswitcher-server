@@ -6,3 +6,4 @@ export const scenes = config.scenes as Scene[];
 export const output = config.output;
 export const settings = config.settings as Settings;
 export const dsk = config.dsk;
+export const cacheFolder = config.cacheFolder;

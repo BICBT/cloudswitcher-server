@@ -1,4 +1,6 @@
-import { SourceType } from 'obs-node';
+import { OutputSettings } from 'obs-node';
+
+export type SourceType = 'Live' | 'Media';
 
 export interface Scene {
   id: string;
@@ -12,4 +14,7 @@ export interface Source {
   type: SourceType;
   url: string;
   previewUrl: string;
+  md5?: string;
+  startOnActive?: boolean;
+  output?: OutputSettings;
 }
