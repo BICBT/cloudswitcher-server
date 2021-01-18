@@ -41,6 +41,9 @@ async function cacheMedia(source: Source): Promise<string> {
         url: source.type === 'Media' ? await cacheMedia(source) : source.url,
         hardwareDecoder: false,
         startOnActive: source.startOnActive ?? false,
+        fpsNum: source.fpsNum,
+        fpsDen: source.fpsDen,
+        samplerate: source.samplerate,
         output: source.output,
       });
     }
