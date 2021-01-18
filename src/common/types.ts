@@ -16,5 +16,8 @@ export interface Source {
   previewUrl: string;
   md5?: string;
   startOnActive?: boolean;
+  fpsNum?: number;
+  fpsDen?: number;
+  samplerate?: number;
   output?: OutputSettings;
 }

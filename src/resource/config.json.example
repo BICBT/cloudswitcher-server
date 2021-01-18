@@ -26,6 +26,9 @@
           "previewUrl": "rtmp://host.docker.internal/preview/source2",
           "md5": "23ac5a7c88378522f95483e5e9ac44b1",
           "startOnActive": false,
+          "fpsNum": 24,
+          "fpsDen": 1,
+          "samplerate": 48000,
           "output": {
             "server": "rtmp://host.docker.internal/preview",
             "key": "source2",
@@ -55,6 +58,9 @@
           "previewUrl": "rtmp://host.docker.internal/preview/source3",
           "md5": "23ac5a7c88378522f95483e5e9ac44b1",
           "startOnActive": true,
+          "fpsNum": 24,
+          "fpsDen": 1,
+          "samplerate": 48000,
           "output": {
             "server": "rtmp://host.docker.internal/preview",
             "key": "source3",
