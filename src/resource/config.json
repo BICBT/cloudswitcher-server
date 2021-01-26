@@ -55,19 +55,21 @@
     "audio": {
       "sampleRate": 44100
     },
-    "output": {
-      "server": "rtmp://host.docker.internal/live",
-      "key": "output",
-      "hardwareEnable": false,
-      "width": 1280,
-      "height": 720,
-      "videoBitrateKbps": 2000,
-      "keyintSec": 1,
-      "rateControl": "CBR",
-      "preset": "medium",
-      "profile": "main",
-      "tune": "zerolatency",
-      "audioBitrateKbps": 64
-    }
+    "output": [
+      {
+        "server": "rtmp://host.docker.internal/live",
+        "key": "output",
+        "hardwareEnable": false,
+        "width": 1280,
+        "height": 720,
+        "videoBitrateKbps": 2000,
+        "keyintSec": 1,
+        "rateControl": "CBR",
+        "preset": "medium",
+        "profile": "main",
+        "tune": "zerolatency",
+        "audioBitrateKbps": 64
+      }
+    ]
   }
 }
