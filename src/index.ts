@@ -39,7 +39,7 @@ async function cacheMedia(source: Source): Promise<string> {
         isFile: source.type === 'Media',
         type: 'MediaSource',
         url: source.type === 'Media' ? await cacheMedia(source) : source.url,
-        hardwareDecoder: false,
+        hardwareDecoder: source.hardwareDecoder ?? false,
         startOnActive: source.startOnActive ?? false,
         fpsNum: source.fpsNum,
         fpsDen: source.fpsDen,

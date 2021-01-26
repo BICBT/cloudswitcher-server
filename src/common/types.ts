@@ -15,6 +15,7 @@ export interface Source {
   url: string;
   previewUrl: string;
   md5?: string;
+  hardwareDecoder?: boolean;
   startOnActive?: boolean;
   fpsNum?: number;
   fpsDen?: number;
