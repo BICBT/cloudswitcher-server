@@ -22,3 +22,13 @@ export interface Source {
   samplerate?: number;
   output?: OutputSettings;
 }
+
+export interface Dsk {
+  id: string;
+  url: string;
+  position: string;
+  top: number;
+  left: number;
+  width: number;
+  height: number;
+}
