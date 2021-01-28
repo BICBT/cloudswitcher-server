@@ -13,10 +13,12 @@
     "express": "^4.17.1",
     "express-validator": "^5.3.1",
     "http-status-codes": "^2.1.4",
+    "mv": "^2.1.1",
     "obs-node": "git+https://github.com/BICBT/obs-node.git#v1.0.41"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
+    "@types/mv": "^2.1.0",
     "@types/node": "^14.14.2",
     "nodemon": "^2.0.6",
     "tsc-watch": "^4.2.9",

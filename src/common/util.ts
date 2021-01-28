@@ -4,6 +4,7 @@ import * as https from 'https';
 import * as stream from 'stream';
 import * as path from 'path';
 import * as os from 'os';
+import * as mv from 'mv';
 
 export async function md5(path: string): Promise<string | undefined> {
   const md5 = crypto.createHash('md5');
@@ -38,7 +39,7 @@ export async function downloadFile(url: string, filePath: string): Promise<void>
           reject(error);
         } else {
           // copy temp file to target
-          fs.rename(tempFilePath, filePath, error => {
+          mv(tempFilePath, filePath, (error: string) => {
             if (error) {
               reject(error);
             } else {
