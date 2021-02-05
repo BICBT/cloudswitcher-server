@@ -55,7 +55,7 @@
     "audio": {
       "sampleRate": 44100
     },
-    "output": [
+    "outputs": [
       {
         "server": "rtmp://host.docker.internal/live",
         "key": "output",
