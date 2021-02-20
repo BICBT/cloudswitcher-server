@@ -38,7 +38,7 @@ RUN mkdir ~/ffmpeg_sources && \
 RUN apt-get -y install \
         autoconf \
         automake \
-        git-core \
+        openssl \
         libass-dev \
         libfreetype6-dev \
         libgnutls28-dev \
@@ -67,6 +67,7 @@ RUN cd ~/ffmpeg_sources && \
     tar xjvf ffmpeg-4.2.2.tar.bz2 && \
     cd ~/ffmpeg_sources/ffmpeg-4.2.2 && \
     PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix=/usr \
+        --enable-openssl     \
         --enable-gpl         \
         --enable-version3    \
         --enable-nonfree     \
