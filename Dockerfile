@@ -1,19 +1,6 @@
 FROM ubuntu:20.04
 
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Use alicloud apt mirror
-RUN rm -rf /etc/apt/sources.list.d/* && \
-    echo "deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse" > /etc/apt/sources.list && \
-    echo "deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse" >> /etc/apt/sources.list && \
-    echo "deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
+ENV DEBIAN_FRONTEND=noninteractives
 
 # Install build tools
 RUN apt-get update && \
@@ -143,7 +130,6 @@ COPY package.json package-lock.json tsconfig.json ./
 COPY src src
 
 # Install dependencies
-RUN npm config set registry https://registry.npm.taobao.org
 RUN npm i -g typescript
 RUN npm config set unsafe-perm true && \
     npm ci && \
