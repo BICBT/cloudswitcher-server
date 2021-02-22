@@ -14,7 +14,7 @@
     "express-validator": "^5.3.1",
     "http-status-codes": "^2.1.4",
     "mv": "^2.1.1",
-    "obs-node": "git+https://github.com/BICBT/obs-node.git#v1.0.44"
+    "obs-node": "git+https://github.com/BICBT/obs-node.git#v1.0.48"
   },
   "devDependencies": {
     "@types/express": "^4.17.8",
