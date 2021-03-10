@@ -1,6 +1,7 @@
 import * as http from 'http';
 import * as express from 'express';
 import * as expressValidator from 'express-validator';
+import * as cors from 'cors';
 
 export type HttpMethod = 'get' | 'post' | 'put' | 'patch' | 'delete';
 
@@ -22,6 +23,7 @@ const requestLogger = (req: express.Request, res: express.Response, next: expres
 
 export async function createHttpServer(options: HttpServerOptions): Promise<void> {
   const app = express();
+  app.use(cors());
   app.use(express.json());
   app.use(expressValidator());
   options.routes.forEach(r => {
