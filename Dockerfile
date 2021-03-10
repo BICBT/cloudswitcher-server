@@ -124,6 +124,13 @@ RUN apt-get install -y xserver-xorg-input-void xserver-xorg-video-dummy
 COPY xorg.conf /etc/xorg.conf
 ENV DISPLAY :99
 
+# Add Font
+RUN mkdir -p /usr/share/fonts/truetype/{SimSun,SimHei,'Microsoft Yahei',Kaiti}
+COPY fonts/SimSun.ttf /usr/share/fonts/truetype/SimSun.ttf
+COPY fonts/SimHei.ttf /usr/share/fonts/truetype/SimHei.ttf
+COPY fonts/Kaiti.ttf /usr/share/fonts/truetype/Kaiti.ttf
+COPY fonts/'Microsoft Yahei.ttf' '/usr/share/fonts/truetype/Microsoft Yahei.ttf'
+
 # Copy code
 WORKDIR /node-app
 COPY package.json package-lock.json tsconfig.json ./

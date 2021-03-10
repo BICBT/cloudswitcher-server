@@ -29,15 +29,6 @@
     }
   ],
   "dsk": [
-    {
-      "id": "logo",
-      "url": "https://httpbin.org/image/png",
-      "position": "top-left",
-      "top": 100,
-      "left": 100,
-      "width": 256,
-      "height": 256
-    }
   ],
   "output": {
     "url": "rtmp://host.docker.internal/live/output",
