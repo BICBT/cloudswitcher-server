@@ -61,6 +61,13 @@ ENV NVIDIA_DRIVER_CAPABILITIES all
 # Fix libvdpau_nvidia.so search path
 RUN ln -s /usr/lib/x86_64-linux-gnu/libvdpau_nvidia.so.1 /usr/lib/x86_64-linux-gnu/libvdpau_nvidia.so
 
+# Add Font
+RUN mkdir -p /usr/share/fonts/truetype/{SimSun,SimHei,'Microsoft Yahei',Kaiti}
+COPY fonts/SimSun.ttf /usr/share/fonts/truetype/SimSun.ttf
+COPY fonts/SimHei.ttf /usr/share/fonts/truetype/SimHei.ttf
+COPY fonts/Kaiti.ttf /usr/share/fonts/truetype/Kaiti.ttf
+COPY ["fonts/Microsoft Yahei.ttf", "/usr/share/fonts/truetype/Microsoft Yahei.ttf"]
+
 # Copy code
 WORKDIR /node-app
 COPY package.json package-lock.json tsconfig.json ./

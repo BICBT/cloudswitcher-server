@@ -129,7 +129,7 @@ RUN mkdir -p /usr/share/fonts/truetype/{SimSun,SimHei,'Microsoft Yahei',Kaiti}
 COPY fonts/SimSun.ttf /usr/share/fonts/truetype/SimSun.ttf
 COPY fonts/SimHei.ttf /usr/share/fonts/truetype/SimHei.ttf
 COPY fonts/Kaiti.ttf /usr/share/fonts/truetype/Kaiti.ttf
-COPY fonts/'Microsoft Yahei.ttf' '/usr/share/fonts/truetype/Microsoft Yahei.ttf'
+COPY ["fonts/Microsoft Yahei.ttf", "/usr/share/fonts/truetype/Microsoft Yahei.ttf"]
 
 # Copy code
 WORKDIR /node-app
